@@ -37,7 +37,7 @@ const App = () => {
         <PrivateRoute  path='/register/:title'>
         <Register />
         </PrivateRoute>
-        <Route  path={'/register/'}>
+        <Route  path='/register'>
         <Register />
         </Route>
         <Route  path='/eventType/:title'>

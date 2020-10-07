@@ -1,17 +1,18 @@
 import React, { createContext, useState } from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import { BrowserRouter as Router, Switch, Route, Link, Redirect, useParams} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from './components/Home/Home';
 import Navber from './components/Navber/Navber';
 import Footer from './components/Footer/Footer';
-import Donation from './components/Donation/Donation';
+
 import Event from './components/Event/Event';
 
 import Register from './components/Register/Register';
 import PrivateRoute from './components/Login/PrivateRoute';
 import Login from './components/Login/Login';
 import Common from './components/Common/Common';
+import EventAdded from './components/EventAdded/EventAdded';
 
 export const UserContext=createContext();
 
@@ -32,11 +33,15 @@ const App = () => {
        <Route  path='/login'>
         <Login />
         </Route>
-        <PrivateRoute  path='/register/:_id'>
+       
+        <PrivateRoute  path='/register/:title'>
         <Register />
         </PrivateRoute>
+        <Route  path='/register'>
+        <Register />
+        </Route>
         <Route  path='/eventType/:title'>
-            <Event />
+            <EventAdded />
         </Route>
         <Route exact path='/'>
         <Home />

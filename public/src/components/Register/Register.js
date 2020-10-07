@@ -14,7 +14,7 @@ const Register = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleEvent/${_id}`)
+        fetch(`https://stormy-journey-12808.herokuapp.com/${_id}`)
         .then(res =>res.json())
         .then(data=> setSingleEvent(data) )
     }, [])
@@ -22,7 +22,7 @@ const Register = () => {
 
     const formSubmit = (e,_id)=>{
         e.preventDefault();
-     fetch('http://localhost:5000/registerForTask/',{
+     fetch('https://stormy-journey-12808.herokuapp.com/registerForTask/',{
         method:'POST',
         headers:{'Content-Type' : 'application/json'},
         body:JSON.stringify(loggedInUSer) 

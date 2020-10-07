@@ -11,7 +11,7 @@ const {title} = useParams()
    const [user, setUser] = useState([]);
   //  const [itemDelete,setItemDelete] = useState([]);
    useEffect(()=>{
-    fetch("http://localhost:5000/taskAdded?email=" + loggedInUSer.email)
+    fetch("https://stormy-journey-12808.herokuapp.com/taskAdded?email=" + loggedInUSer.email)
         .then(res=>res.json())
         .then(data=>{
         setUser(data);
@@ -20,7 +20,7 @@ const {title} = useParams()
 
    const deleteItem=(id)=>{
    
-     fetch(`http://localhost:5000/deleteItem/${id}`, {
+     fetch(`https://stormy-journey-12808.herokuapp.com/deleteItem/${id}`, {
      method: "DELETE",
      })
      .then(res=>res.json())

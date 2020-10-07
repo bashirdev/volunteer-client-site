@@ -9,7 +9,7 @@ const [eventTask, setEventTask] = useState([]);
 
 
 useEffect(()=>{
-     fetch('http://localhost:5000/volunteer')
+     fetch('https://stormy-journey-12808.herokuapp.com/volunteer')
      .then(res=>res.json())
      .then(data=>setEventTask(data))
 },[])
