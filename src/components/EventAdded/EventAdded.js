@@ -28,6 +28,7 @@ const {title} = useParams()
       console.log(data);
       // return <EventAdded />
       //only page load then deteted item
+      window.location.reload()
      });
  
    }
